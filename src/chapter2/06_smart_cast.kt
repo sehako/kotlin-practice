@@ -17,11 +17,12 @@ class Sum(val left: Expression, val right: Expression) : Expression
 
 // if 와 is를 사용한 식 계산
 fun eval(e: Expression): Int {
+    // 스마트 캐스트
     if (e is Number) {
         // as로 명시적 형변환이 가능
-        // val n = e as Number
+        // val n = e as Number <- as는 안전하지 않은 캐스팅, 심지어 이미 is로 검사해서 필요 없음
         // 하지만 is로 이미 검사한 이후에는 e를 해당 타입으로 사용 가능
-        return e.value
+        return e.value // 변환 이후 변경될 수 없는 변수만 접근 가능 (val 또는 커스텀 getter가 없는 프로퍼티)
     }
 
     if (e is Sum) {
