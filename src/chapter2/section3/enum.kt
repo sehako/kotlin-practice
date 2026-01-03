@@ -1,4 +1,4 @@
-package chapter2
+package chapter2.section3
 
 // 코틀린에서의 Enum 정의
 // 자바에서는 enum Color {} 이런 식

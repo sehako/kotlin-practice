@@ -1,8 +1,8 @@
-package chapter2
+package chapter2.section3
 
 // import로 Enum 상수 값을 불러올 수 있음
 // 이를 통해 Color.RED -> RED 가능 (자바의 static import와 유사)
-import chapter2.Color.*
+import chapter2.section3.Color.*
 
 // when도 값을 만들어 내는 식(expression)
 

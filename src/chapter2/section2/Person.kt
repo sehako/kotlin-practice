@@ -1,4 +1,4 @@
-package chapter2.kotlinclass
+package chapter2.section2
 
 // 코틀린에서의 클래스
 // 맴버의 접근 제한자는 일반적으로 private

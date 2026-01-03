@@ -1,4 +1,4 @@
-package chapter2
+package chapter2.section4
 
 fun main() {
     // 코틀린에서의 while과 do-while은 자바와 유사

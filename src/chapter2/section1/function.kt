@@ -1,4 +1,4 @@
-package chapter2
+package chapter2.section1
 
 // 함수 선언 식
 // 코틀린은 함수를 모든 파일의 최상위 수준에 정의 가능

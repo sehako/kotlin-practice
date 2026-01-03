@@ -1,4 +1,4 @@
-package chapter2
+package chapter2.section4
 
 // 코틀린에서의 in은 범위를 검사하는데도 사용할 수 있음
 fun main() {

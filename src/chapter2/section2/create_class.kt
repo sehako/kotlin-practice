@@ -1,4 +1,4 @@
-package chapter2.kotlinclass
+package chapter2.section2
 
 fun main() {
     // 코틀린의 클래스 인스턴스 생성 방법

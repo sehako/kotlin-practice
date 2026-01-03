@@ -1,4 +1,4 @@
-package chapter2
+package chapter2.section3
 
 fun main() {
     println(eval(Sum(Sum(Number(1), Number(2)), Number(4))))
