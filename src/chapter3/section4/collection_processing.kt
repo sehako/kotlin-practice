@@ -1,4 +1,4 @@
-package chapter3
+package chapter3.section4
 
 // 컬렉션을 처리할 때 쓰는 코틀린 표준 라이브러리 함수 활용 예시
 // vararg: 호출 시 인자 개수가 달라질 수 있는 함수 정의

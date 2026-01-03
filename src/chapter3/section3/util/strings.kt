@@ -1,4 +1,4 @@
-package chapter3.util
+package chapter3.section3.util
 
 // 확장 함수 import 예시 확인용
 fun String.lastCharOutSide(): Char = this[length - 1]

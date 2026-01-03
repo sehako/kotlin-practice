@@ -1,4 +1,4 @@
-package chapter3
+package chapter3.section3
 
 // 확장 함수 import 예시
 // as 활용 시 임포트한 클래스나 함수를 다른 이름으로 활용 가능
@@ -6,8 +6,8 @@ package chapter3
 // 이름을 바꿔 import하면 편리함
 // 코틀린 문법 상 짧은 이름이 권장됨
 // 따라서 import할 때 이름을 바꾸는 것이 함수의 이름 충돌을 해결하는 유일 방법
-import chapter3.util.joinToStringExpandFunction
-import chapter3.util.lastCharOutSide as lastCChar
+import chapter3.section3.util.joinToStringExpandFunction
+import chapter3.section3.util.lastCharOutSide as lastCChar
 
 // 어떤 클래스의 멤버 메서드인 것처럼 호출할 수 있지만 그 클래스의 밖에 선언된 함수를 확장 함수
 // 확장 함수는 다른 JVM 생태계의 API 재작성 없이도 편리한 여러 기능을 사용하기 위한 코틀린의 문법

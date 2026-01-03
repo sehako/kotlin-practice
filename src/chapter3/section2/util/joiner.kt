@@ -1,6 +1,6 @@
 // @file:JvmName(name = "Joiner") 자바 컴파일 시 만들 클래스 이름 지정 (참고 1)
 
-package chapter3.util
+package chapter3.section2.util
 
 // 자바에서는 모든 코드를 클래스의 메서드로 작성해야 함
 // 코틀린에서는 함수를 소스 파일의 최상위 수준에 명시함으로써 외부에서 import가 가능하도록 만들 수 있음
@@ -26,24 +26,6 @@ fun <T> joinToString(
     val result = StringBuilder(prefix)
 
     for ((index, element) in collection.withIndex()) {
-        if (index > 0) result.append(separator)
-        result.append(element)
-    }
-
-    result.append(postfix)
-    return result.toString()
-}
-
-// joinToString을 확장 함수로써 유틸리티 함수로 만든 예시
-fun <T> Collection<T>.joinToStringExpandFunction(
-    separator: String = ", ",
-    prefix: String = "",
-    postfix: String = ""
-): String {
-    val result = StringBuilder(prefix)
-
-    // this.withIndex()에서 this 생략
-    for ((index, element) in withIndex()) {
         if (index > 0) result.append(separator)
         result.append(element)
     }

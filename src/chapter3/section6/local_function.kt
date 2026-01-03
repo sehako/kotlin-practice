@@ -1,4 +1,4 @@
-package chapter3
+package chapter3.section6
 
 // 자바 코드를 작성하다보면 DRY(Don't Repeat Yourself) 원칙(중복 코드 방지)을 지키기 힘음
 // 일반적으로 메서드를 분리하지만 이게 많아질수록 각 메서드의 관계를 파악하기 어려움

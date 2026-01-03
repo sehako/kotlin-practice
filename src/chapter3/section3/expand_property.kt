@@ -1,4 +1,4 @@
-package chapter3
+package chapter3.section3
 
 // 프로퍼티 형식의 구문으로 사용할 수 있는 API를 추가할 수 있음
 // 프로퍼티이지만 실제로 확장 프로퍼티는 아무 상태도 가질 수 없다.

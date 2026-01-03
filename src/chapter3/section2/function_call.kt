@@ -1,7 +1,7 @@
-package chapter3
+package chapter3.section2
 
-// util 패키지에 명시된 joiner.kt의 최상위 함수를 import
-import chapter3.util.joinToString
+// util 패키지에 명시된 string_joiner.kt의 최상위 함수를 import
+import chapter3.section2.util.joinToString
 
 // 함수를 호출하기 쉽게 만들기
 fun main() {
