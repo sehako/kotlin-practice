@@ -23,9 +23,9 @@ fun main() {
     // 정규식과 3중 따옴표로 묶은 문자열
     // 파일의 전체 경로명을 디렉터리, 파일 이름, 확장자 명으로 구분
     // 1. String을 확장한 함수
-    parsePath("C:/Users/user/kotlin/kotlin-book/src/chapter2/variables.kt")
+    parsePath("C:/Users/user/kotlin/kotlin-book/src/chapter2/02_variables.kt")
     // 2. 정규식 사용
-    parsePathRegex("C:/Users/user/kotlin/kotlin-book/src/chapter2/variables.kt")
+    parsePathRegex("C:/Users/user/kotlin/kotlin-book/src/chapter2/02_variables.kt")
 
     // 3중 따옴표는 줄 바꿈을 포함해 아무 문자열이나 그대로 들어감
     val kotlinString = """
