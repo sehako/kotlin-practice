@@ -1,0 +1,6 @@
+package chapter05.section1;
+
+@FunctionalInterface
+public interface OnClickListener {
+    void onClick(View view);
+}
