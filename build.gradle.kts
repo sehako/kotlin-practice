@@ -1,5 +1,3 @@
-import java.io.File
-
 plugins {
     kotlin("jvm") version "2.2.21"
     application
@@ -15,6 +13,10 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     implementation(kotlin("reflect"))
+    implementation("org.jetbrains.kotlinx:kotlinx-html:0.12.0")
+    testImplementation("io.kotest:kotest-assertions-core-jvm:6.0.7")
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.1")
+    implementation("org.jetbrains.exposed:exposed-core:0.61.0")
 }
 
 kotlin {
@@ -35,7 +37,8 @@ afterEvaluate {
             if (file.isFile && file.extension == "kt" && file.readText().contains("fun main")) {
                 val relativePath = file.relativeTo(srcDir)
                 val className = relativePath.path.removeSuffix(".kt").replace(File.separator, ".") + "Kt"
-                val taskName = "run_" + relativePath.path.removeSuffix(".kt").replace(File.separator, "_").replace('.', '_')
+                val taskName =
+                    "run_" + relativePath.path.removeSuffix(".kt").replace(File.separator, "_").replace('.', '_')
 
                 if (tasks.findByName(taskName) == null) {
                     tasks.register<JavaExec>(taskName) {
