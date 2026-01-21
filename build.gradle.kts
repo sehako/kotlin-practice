@@ -14,14 +14,15 @@ dependencies {
     testImplementation(kotlin("test"))
     implementation(kotlin("reflect"))
     implementation("org.jetbrains.kotlinx:kotlinx-html:0.12.0")
-    testImplementation("io.kotest:kotest-assertions-core-jvm:6.0.7")
+    testImplementation("io.kotest:kotest-assertions-core:6.0.7")
+    testImplementation("io.kotest:kotest-runner-junit5:6.0.7")
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.1")
     implementation("org.jetbrains.exposed:exposed-core:0.61.0")
 }
 
 kotlin {
     sourceSets.main {
-        kotlin.srcDir("src")
+        kotlin.srcDir("src/main")
     }
     jvmToolchain(21)
 }
