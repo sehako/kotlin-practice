@@ -13,11 +13,13 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     implementation(kotlin("reflect"))
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
     implementation("org.jetbrains.kotlinx:kotlinx-html:0.12.0")
     testImplementation("io.kotest:kotest-assertions-core:6.0.7")
     testImplementation("io.kotest:kotest-runner-junit5:6.0.7")
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.1")
     implementation("org.jetbrains.exposed:exposed-core:0.61.0")
+    implementation("io.projectreactor:reactor-core:3.8.2")
 }
 
 kotlin {
@@ -37,7 +39,12 @@ afterEvaluate {
         srcDir.walk().forEach { file: File ->
             if (file.isFile && file.extension == "kt" && file.readText().contains("fun main")) {
                 val relativePath = file.relativeTo(srcDir)
-                val className = relativePath.path.removeSuffix(".kt").replace(File.separator, ".") + "Kt"
+                val baseName = relativePath.path.removeSuffix(".kt")
+                val parts = baseName.split(File.separator)
+                val sanitizedParts = parts.map { part ->
+                    if (part.firstOrNull()?.isDigit() == true) "_$part" else part
+                }
+                val className = sanitizedParts.joinToString(".") + "Kt"
                 val taskName =
                     "run_" + relativePath.path.removeSuffix(".kt").replace(File.separator, "_").replace('.', '_')
 
@@ -48,6 +55,8 @@ afterEvaluate {
                         classpath = mainSourceSet.runtimeClasspath
                         mainClass.set(className)
                         standardInput = System.`in`
+                        // Enable coroutines debug mode
+                        jvmArgs("-Dkotlinx.coroutines.debug=on")
                     }
                 }
             }
